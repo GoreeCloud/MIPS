@@ -1,0 +1,26 @@
+name: MIPS README and license integrity
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  docs-integrity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Verify canonical five system names and repository license
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          s=Path('README.md').read_text(encoding='utf-8')
+          expected=['GoreeCloud UI','GoreeShield','Wardveil','GoreeCloud Identity','GoreeCloud Mesh']
+          assert len(s)>500 and all(x in s for x in expected)
+          lic=Path('LICENSE').read_text(encoding='utf-8')
+          assert lic.startswith('MIT License') and 'Copyright (c) 2026 GoreeCloud' in lic
+          print('Five MIPS references and repository license present')
+          PY
