@@ -30,7 +30,7 @@ As the founder of GoreeCloud, I establish the following:
 
 **Release and evidence boundary:** The correction does not establish that any application has already completed integration with the five MIPS, does not approve a new platform contract, and does not promote a product to Stable or Anchor. Verify each changed artifact and update the relevant tracking record until the active-source cleanup is complete.
 
-**Related authority:** [GoreeCloud's current five-MIPS requirement](https://drive.google.com/file/d/1mzBTnWag2ca8wsRg9uHl4IXOkjkoTT9o/view); [retirement and cleanup tracker](https://github.com/GoreeCloud/github-dashboard/issues/13).
+**Related authority:** [GoreeCloud's current five-MIPS requirement](https://drive.google.com/file/d/1mzBTnWag2ca8wsRg9uHl4IXOkjkoTT9o/view). An earlier retirement/cleanup tracker at a former `GoreeCloud/github-dashboard` issue #13 is **not currently reachable** (GitHub 404); it must not be treated as an active tracking authority. Use current authoritative GoreeCloud governance and verified active repository/task records for remaining work.
 
 ## Repository license and scope
 
